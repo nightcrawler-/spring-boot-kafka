@@ -171,3 +171,10 @@ Think of this as the host of your regular API endpoints, `/api/v1/county`. It re
 #### 1. Create the Spring Boot app
 
 Follow the steps at `https://start.spring.io/` to create and download the starter project.
+
+o
+o
+o
+<Extra content coming here soon, lazy ass writer>
+
+`curl -X POST -F 'message=welcome to Nakuru' http://13.76.134.160:8080//kafka/publish`
