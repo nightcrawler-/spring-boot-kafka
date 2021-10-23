@@ -155,3 +155,8 @@ The following command consumes messages from TutorialTopic. Note the use of the 
 
 `~/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TutorialTopic --from-beginning`
 
+
+
+## Running the sample app
+
+The sample app is a library application that has a producer and a consumer
