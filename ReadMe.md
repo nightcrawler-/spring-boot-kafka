@@ -145,18 +145,29 @@ Publishing messages in Kafka requires:
 	- A producer, who enables the publication of records and data to topics.
 	- A consumer, who reads messages and data from topics.
 
-Create a topic `TutorialTopic`:
+Create a topic `Nakuru`:
 
-`~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic`
+`~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Nakuru`
 
 Next, create a Kafka consumer using the kafka-console-consumer.sh script. It expects the ZooKeeper server’s hostname and port, along with a topic name as arguments.
 
-The following command consumes messages from TutorialTopic. Note the use of the --from-beginning flag, which allows the consumption of messages that were published before the consumer was started:
+The following command consumes messages from Nakuru. Note the use of the --from-beginning flag, which allows the consumption of messages that were published before the consumer was started:
 
-`~/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TutorialTopic --from-beginning`
+`~/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic Nakuru --from-beginning`
+
+To publish a message to the Nakuru topic:
+`echo "Hello, World, from Nakuru" | ~/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic Nakuru > /dev/null`
 
 
 
 ## Running the sample app
 
 The sample app is a library application that has a producer and a consumer
+
+### Producer
+
+Think of this as the host of your regular API endpoints, `/api/v1/county`. It receives requests from clients and publishes them to the broker. Or, has your `controllers` ?
+
+#### 1. Create the Spring Boot app
+
+Follow the steps at `https://start.spring.io/` to create and download the starter project.
