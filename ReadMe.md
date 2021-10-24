@@ -6,7 +6,9 @@ Java runtime
 
 `sudo apt install default-jre`
 
-## 1. Kafka handles requests over the network, so it is recommended to create a dedicated user for the serivice in order to minimize any damage incase the server is compromised. Additionally, add the new user to the `sudo` group.
+## 1. Setup kafka user
+
+Kafka handles requests over the network, so it is recommended to create a dedicated user for the serivice in order to minimize any damage incase the server is compromised. Additionally, add the new user to the `sudo` group.
 
 `sudo adduser kafka`
 
